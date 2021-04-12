@@ -1,10 +1,11 @@
 <html>
     <head>
         <link rel="stylesheet" href="../html_assessment_updated/styles/style.css">
+        <script src="./Javascript/index.js"></script>
         
     </head>
 
-    <body onload="startTime()">
+    <body>
         <header>
             <nav>
                 
@@ -17,7 +18,7 @@
                     <li><a>About us</a></li>
                     <li><a>Contact</a></li>
                 </ul>
-                <p id = "displaytime"></p>
+                
             </nav>
            </header>
 
@@ -26,21 +27,21 @@
 
         <section>
             <div>
-                <img src="../html_assessment_updated/Images/book1.png" class="imagestyling">
-                    <div class="Textonimage">Image One</div> 
+                <img id="image1" src="../html_assessment_updated/Images/book1.png" class="imagestyling" onclick="swap1and2()">
+                    <div class="Textonimage" >Image One</div> 
                 </div>
                 <div>
-                    <img src="../html_assessment_updated/Images/book2.png" class="imagestyling">
-                    <div class="Textonimage"> Image Two</h1>
+                    <img id="image2" src="../html_assessment_updated/Images/book2.png" class="imagestyling" onclick="swapImage2and3and1and4()">
+                    <div class="Textonimage" > Image Two</h1>
                     </div>
                 </div>
                 <div>
-                    <img src="../html_assessment_updated/Images/book3.png" class="imagestyling">
+                    <img id="image3" src="../html_assessment_updated/Images/book3.png" class="imagestyling">
                     <div class="Textonimage"> Image Third</h1>
                     </div>
                 </div>
                 <div>
-                    <img src="../html_assessment_updated/Images/book4.png" class="imagestyling">
+                    <img id="image4" src="../html_assessment_updated/Images/book4.png" class="imagestyling">
                     <div class="Textonimage"> Image Four</h1>
                     </div>
                 </div>

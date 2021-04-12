@@ -17,3 +17,26 @@ $(document).ready(function() {
         });
     }
 });
+
+function validate() {
+    var name = document.contactform.Name.value;
+    var email = document.contactform.Email.value;
+    var comment = document.contactform.comment.value;
+    var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+    var namereg = /^[a-zA-Z ]{2,30}$/;
+
+    if (name==null || name.trim().length == 0 || 
+        email==null || email.trim().length == 0 ||
+        comment==null || comment.trim().length == 0){  
+        alert("All Fields are mandatory");  
+        return false;
+    }
+    else if(!name.match(namereg)){
+        alert("Enter a valid name");
+        return false;
+    }
+    else if(!email.match(emailReg)) {
+        alert("Enter a valid Email Address");
+        return false;
+    }
+    } 

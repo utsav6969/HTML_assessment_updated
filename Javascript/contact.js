@@ -1,22 +1,19 @@
-var pictures = [], i = -1;
-                pictures[0] = "./images/slide1.png";
-                pictures[1] = "./images/slide2.png";
-                pictures[2] = "./images/slide3.png";
-                pictures[3] = "./images/slide4.png";
-                pictures[4] = "./images/slide5.png";
-            
-            
-            function Nextimage() 
-                {
-                if(i == pictures.length - 1) {
-                  i = 0;
-                }
-                else{
-                  i = i+1;
-                }
-                document.getElementById("img").src = pictures[i];
-                }
-                function loadnextimage() 
-                {
-                setInterval(Nextimage, 2500);
-                }
+$(document).ready(function() {
+    var images = $('.pictures')
+    currentimageindex = 0;
+    images.hide();
+    Nextimage();
+    function Nextimage() {
+        $(images[currentimageindex]).fadeIn('fast').delay(2500).fadeOut('fast');
+        $(images[currentimageindex]).queue(function() {
+            if (currentimageindex < images.length - 1) {
+                currentimageindex = currentimageindex + 1;
+            }
+            else {
+                currentimageindex = 0;
+            }
+            Nextimage();
+            $(this).dequeue();
+        });
+    }
+});

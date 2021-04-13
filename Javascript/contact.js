@@ -19,9 +19,9 @@ $(document).ready(function() {
 });
 
 function validate() {
-    var name = document.contactform.Name.value;
-    var email = document.contactform.Email.value;
-    var comment = document.contactform.comment.value;
+    var name = document.getElementById("fname").value;;
+    var email = document.getElementById("email").value;
+    var comment = document.getElementById("comment").value;
     var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
     var namereg = /^[a-zA-Z ]{2,30}$/;
 

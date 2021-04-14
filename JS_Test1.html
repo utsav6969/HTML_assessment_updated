@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+			// Question 1
+            function Sumofarrays(arr) {
+		        var arrsum=0;
+                var i;
+		        for(i=0; i<arr.length; i++) {
+			        arrsum += arr[i];
+		        }
+		        return arrsum;
+	        }
+        var array1 = [1,2,3,4,5];
+        var array2 = [1,2,3,4,5];
+        document.write(Sumofarrays(array1) + Sumofarrays(array2)  + "<br>");
+
+		// Question 2
+            function printevennumbers(n) {
+		        var resultarray = []
+                var i;
+		        for(i=1;i <= n;i++){
+			        if(i%2 === 0){
+				        resultarray.push(i);
+			        }
+		        }
+		        return resultarray;
+	        }
+            document.write(printevennumbers(10) + "<br>");
+            
+			// Question 3
+            function Printreversearray(arr) {
+	            var resultarray = [];
+                var i;
+		        for(i=arr.length-1; i>=0; i--) {
+			        resultarray.push(arr[i]);
+		        }
+		        return resultarray;
+		        }
+            var array = [1,3,2,4,5,6,7];
+            document.write(Printreversearray(array)  + "<br>");
+
+			// Question 4 
+            function sumofeachpair(arr_1,arr_2) {
+		    var resultarr = [];
+            var i;
+		    for(i=0;i<=arr_1.length-1;i++){
+			    resultarr[i] = arr_1[i] + arr_2[i];
+			}
+	        return resultarr;
+	        }
+            var arr1 = [1,2,3,4,5];
+            var arr2 = [1,2,3,4,5];
+            
+            document.write(sumofeachpair(arr1,arr2) + "<br>");
+
+		// Question 6
+        function ContainsYorNot (str) {
+		var check = str.includes("y");
+		if(check == true){
+			return "yes"; 
+        }
+		else{
+			return "no";
+		}
+				
+	}
+    document.write(ContainsYorNot("essyss") + "<br>")
+
+	// Question 7
+    function factorial(n) {
+		if(n==0 || n==1){
+			return 1;
+         }
+		else{	
+			var facto=1;
+			for(i=1;i<=n;i++){
+				facto *= i; 
+			
+		}
+		}
+        return facto;
+    }
+
+    document.write(factorial(5) + "<br>");
+
+	// Question 9
+	function palindrome(str){
+    	var strarr = str.split('');
+		var reversestr = [];
+ 	    var i;
+		for(i=str.length - 1; i>=0; i--){
+     		 reversestr.push(str[i])
+
+	    }
+    	if(strarr.join() == reversestr.join()){
+      		return "Yes";
+    	}
+		else{
+      		return "No";
+    	}
+	}
+	document.write(palindrome("racecar") + "<br>");
+	document.write(palindrome("java") + "<br>");
+
+	// Question 10
+	function sumofeverynumber(n) {
+		var sum = 0;
+    	var i;
+		for(i=1;i<=n;i++){
+			sum += i;
+		}
+		return sum;		
+	}
+	document.write(sumofeverynumber(2) + "<br>");
+	document.write(sumofeverynumber(8) + "<br>");
+
+        </script>
+    </head>
+    <body>
+        <p id="sumarray"></p>
+        <p id="printevennum"> </p>
+        <p id="reversearray"> </p>
+    </body>
+</html>

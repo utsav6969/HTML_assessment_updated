@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <script>
+            // Question 1
+            function OutputTheString(GivenString){
+		    var GivenStringInLowerCase = GivenString.toLowerCase();
+            var output;
+	        switch(GivenStringInLowerCase) {
+			case "jabroni":
+				output = "Patron Tequila";
+				break;
+			case "school counselor":
+				output = "Anything with Alcohol";
+				break;
+			case "programmer":
+				output = "Hipster Craft Beer";
+				break;
+			case "bike gang member":
+				output = "Moonshine";
+				break;
+			case "politician":
+				output = "Your tax dollars";
+				break;
+			case "rapper":
+				output = "Cristal";
+				break;
+			default:
+				output = "Beer";
+			
+			}  
+			return output;   
+		}
+
+        document.write(OutputTheString("ProGRAMMer") + "<br>");
+        document.write(OutputTheString("")+ "<br>");
+
+        // Question 5
+        function reversestring(str) {
+		var arr = str.split('');
+		var reversedarr = [];
+        var i;
+        for(i=arr.length - 1; i>=0; i--){
+            reversedarr.push(arr[i]);
+        }
+		var result = reversedarr.join(' ');
+		
+		return result;
+		}
+
+        document.write(reversestring("abcdefgh") + "<br>");
+
+        // Question 7
+        function reversethewords(str) {
+		var arr = str.split(' ');
+		var reversedarr = [];
+        var i;
+        for(i=arr.length-1 ;i>=0;i-- ){
+            reversedarr.push(arr[i]);
+        }
+		var result = reversedarr.join(' ');
+		
+		return result;
+		}
+        document.write(reversethewords("The greatest victory is that which require no battle") + "<br>");
+
+
+        // Question 9
+        function Banjo(inputname) {
+		
+		if(inputname[0] === 'R' || inputname[0] === 'r') {
+			return(inputname + " plays banjo");
+        }
+		else{
+			return(inputname + " Does not play banjo");
+		}
+		}
+
+        document.write(Banjo("Utsav") + "<br>");
+        document.write(Banjo("Rajat" )+ "<br>");
+		
+        // Question 10
+        function tripleX(str) {
+		var indexofx = str.indexOf("x");
+		if(str[indexofx + 1]=="x" && str[indexofx+2]=="x"){
+			return true;
+    }
+		else{
+			return false;
+		}
+		}
+		document.write(tripleX("abraxxxas"));
+</script>
+    </head>
+    <body>
+
+    </body>
+</html>

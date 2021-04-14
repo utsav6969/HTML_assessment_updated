@@ -54,6 +54,18 @@
             
             document.write(sumofeachpair(arr1,arr2) + "<br>");
 
+			//Question 5
+			function replacewithZ(str){
+			
+			stri = str.split('');
+			for (var i = 0; i <stri.length; i++) {
+				if(i%2!=0)
+                {
+					stri[i] = "Z";
+                }
+            } return stri;}
+			document.write(replacewithZ("abcdef").join('')+"<br>");
+
 		// Question 6
         function ContainsYorNot (str) {
 		var check = str.includes("y");
